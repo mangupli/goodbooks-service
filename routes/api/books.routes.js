@@ -17,11 +17,15 @@ booksApiRouter.post('/', async (req, res) => {
       user_id: userId,
     });
 
+    /* делаем запрос к базе данных, чтобы подтянуть пользователя */
+
     const newBook = await Book.findOne({
+      where: {
+        id: book.id
+      },
       include: {
         model: User,
       },
-
     });
 
     const renderedHTML = res.renderComponent(

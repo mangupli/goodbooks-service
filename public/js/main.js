@@ -6,23 +6,31 @@ addBookForm.addEventListener('submit', async (event) => {
 
   const { title, author } = addBookForm;
 
-  // отправляем запрос на сервер, URL - /books
-  const response = await fetch('/api/books', {
-    method: 'POST',
-    body: JSON.stringify({
-      title: title.value,
-      author: author.value,
-    }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+  try {
+    // отправляем запрос на сервер, URL - /books
+    const response = await fetch('/api/books', {
+      method: 'POST',
+      body: JSON.stringify({
+        title: title.value,
+        author: author.value,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
-  // получаем ответ в формате json
-  const result = await response.json();
+    if (response.ok) {
+      // получаем ответ в формате json
+      const result = await response.json();
 
-  // вставляем html в начало контейнера
-  booksContainer.insertAdjacentHTML('afterbegin', result.html);
+      // вставляем html в начало контейнера
+      booksContainer.insertAdjacentHTML('afterbegin', result.html);
+
+      addBookForm.reset();
+    }
+  } catch (error) {
+    console.error(error.message);
+  }
 });
 
 // делегирование событий

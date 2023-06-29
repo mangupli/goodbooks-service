@@ -70,8 +70,8 @@ function ProfilePage({ user, books }) {
         ))}
       </div>
 
-      <script src="/js/profile.js" />
-      <script src="/js/main.js" defer />
+      <script defer src="/js/profile.js" />
+      <script defer src="/js/main.js" />
     </Layout>
   );
 }
