@@ -21,3 +21,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.users-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}

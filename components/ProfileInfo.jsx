@@ -8,7 +8,6 @@ function ProfileInfo({ user }) {
   return (
     <>
       <p className="card-text">
-        Фото профиля:
         <img
           src={pictureAdress}
           className="card-img-top"
@@ -17,7 +16,7 @@ function ProfileInfo({ user }) {
       </p>
       <p className="card-text">
         <b>логин: </b>
-        {user.login}
+        <a href={`/users/${user.id}`}>{user.login}</a>
       </p>
     </>
   );

@@ -7,8 +7,11 @@ function Header({ user }) {
     contentNavBar = (
       <>
         <div className="nav-item nav-link">{`Привет, ${user.login}!`}</div>
+        <a href="/users" className="btn btn-info">
+          Все пользователи
+        </a>
         <a href="/my-profile" className="btn btn-info">
-          Профиль
+            Мой профиль
         </a>
         <a className="btn btn-outline-secondary" href="/auth/logout">
           Выйти
