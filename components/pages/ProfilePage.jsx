@@ -45,7 +45,7 @@ function ProfilePage({ user, books }) {
         </button>
       </form>
       <form id="add-book-form" className="mb-3">
-        <h3>Добавить книгу</h3>
+        <h3>Хочу порекомендовать книгу:</h3>
         <div className="mb-3">
           <label htmlFor="nameInput" className="form-label">
             Название

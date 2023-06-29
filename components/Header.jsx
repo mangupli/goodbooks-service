@@ -11,7 +11,7 @@ function Header({ user }) {
           Все пользователи
         </a>
         <a href="/my-profile" className="btn btn-info">
-            Мой профиль
+          Мой профиль
         </a>
         <a className="btn btn-outline-secondary" href="/auth/logout">
           Выйти
@@ -35,12 +35,26 @@ function Header({ user }) {
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-white justify-content-between">
-        <img className="logo" src="/images/logo.jpg" alt="cute whale" />
         <div className="container">
-          <a className="navbar-brand" href="/">
-            Goodbooks — рекомендуем хорошие книги
-          </a>
-          <div className="navbar-nav">{contentNavBar}</div>
+          <img className="logo" src="/images/logo.jpg" alt="cute whale" />
+          <div>
+            <a className="navbar-brand" href="/">Goodbooks</a>
+            <span className="big-desc"> — рекомендуем хорошие книги</span>
+          </div>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="navbar-nav">{contentNavBar}</div>
+          </div>
         </div>
       </nav>
     </header>

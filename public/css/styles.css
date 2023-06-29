@@ -27,3 +27,41 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 }
+
+@media (max-width: 900px) {
+  .users-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .users-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 550px) {
+  .big-desc {
+    display: none;
+  }
+}
+
+.small-desc {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 550px) {
+  .small-desc {
+    display: none;
+  }
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
